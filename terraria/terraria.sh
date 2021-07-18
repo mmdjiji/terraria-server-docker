@@ -19,6 +19,7 @@ start() {
     echo "$SERVICE is already running!"
     exit
   fi
+  chmod +x $BIN_PATH$SERVICE
 
   echo "Starting $SERVICE..."
   screen -AmdS $SCNAME $BIN_PATH$SERVICE -config $CONFIG
